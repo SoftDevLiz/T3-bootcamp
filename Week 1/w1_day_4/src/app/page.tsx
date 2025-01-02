@@ -12,22 +12,22 @@ useEffect(() => {
 }, []);
 
   return (
-      <main>
+      <div className="flex flex-col min-h-screen">
         <header>
           <nav className="flex w-screen h-20 justify-around items-center border-2 border-black">
             <h1 className="text-4xl">Tailwind CSS Homepage</h1>
-            <button className="animate-bounce border-2 border-black rounded-md hover:bg-gray-200 text-xl font-semibold">Try me</button>
+            <button className="motion-safe:animate-bounce border-2 border-black rounded-md hover:bg-gray-200 text-xl font-semibold">Try me</button>
           </nav>
         </header>
-        <div className="flex flex-col items-center h-screen justify-center">
+        <main className="flex flex-col flex-grow items-center justify-center">
           <h1 className="text-4xl m-10">Welcome to the homepage!</h1>
           <button className="border-2 border-black rounded-md hover:bg-gray-200 text-xl font-semibold">Hover over me</button>
-        </div>
-        <footer className="flex flex-col items-center font-mono">
+        </main>
+        <footer className="flex flex-col items-center font- p-4 bg-gray-100 border-t">
           <p>This page taught me about animations, custom colour schemes, and theming with Tailwind CSS.</p>
           <p>Done on 01-01-2025!</p>
           <p>Your time is {dateTime}</p>
         </footer>
-      </main>
+      </div>
   );
 }
