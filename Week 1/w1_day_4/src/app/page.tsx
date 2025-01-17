@@ -16,7 +16,7 @@ useEffect(() => {
         <header>
           <nav className="flex w-screen h-20 justify-around items-center border-t">
             <h1 className="text-4xl">Tailwind CSS Homepage</h1>
-            <button className="motion-safe:animate-bounce border border-black rounded-md hover:bg-gray-200 text-xl font-semibold p-1">Try me</button>
+            <button className="bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-zinc-950 relative border border-slate-900 bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat shadow-2xl transition-[background-position_0s_ease] hover:bg-[position:200%_0,0_0] hover:duration-[1500ms] motion-safe:animate-bounce rounded-md text-xl text-white font-semibold p-1">Try me</button>
           </nav>
         </header>
         <main className="flex flex-col flex-grow items-center justify-center bg-mainGradient bg-cover">
