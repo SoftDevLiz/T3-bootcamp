@@ -9,7 +9,8 @@ export default {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
       backgroundImage: {
-        mainGradient: 'linear-gradient(60deg, #29323c 0%, #485563 100%)'
+        mainGradient: 'linear-gradient(60deg,rgb(48, 41, 60) 0%, #485563 100%)',
+        buttonGradient: 'linear-gradient(60deg, purple 10%, red)',
       },
     },
   },
