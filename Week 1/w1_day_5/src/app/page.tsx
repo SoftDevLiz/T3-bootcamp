@@ -1,14 +1,28 @@
 "use client"
 import React, { useState } from 'react';
 
-export default function Home() {
-  const [formData, setFormData] = useState( {email: "Email address", message: "Type your message here"} )
+interface FormData {
+  email: string,
+  message: string;
+}
 
-  const handleChange = (event) => {
+export default function Home() {
+  const [formData, setFormData] = useState<FormData>( {email: "", message: ""} )
+  const [focusedField, setFocusedField] = useState<string | null>(null)
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({
       ...prevData, [name]: value,
     }))
+  }
+
+  const handleFocus = (field: string) => {
+    setFocusedField(field);
+  }
+
+  const handleBlur = () => {
+    setFocusedField(null);
   }
 
   return (
@@ -19,21 +33,33 @@ export default function Home() {
       <main>
       <form className='flex flex-col items-center space-y-5'>
         <input
+          className='p-2'
           id='email'
           type='email'
           name='email'
+          placeholder={focusedField === 'email' ? "" : "Email address"}
           value={formData.email}
           onChange={handleChange}
+          onFocus={() => handleFocus('email')}
+          onBlur={handleBlur}
         />
-        <input
+        <textarea
+          className='p-2'
           id='message'
-          type='text'
           name='message'
+          placeholder={focusedField === 'message' ? "" : "Type your message here"}
           value={formData.message}
           onChange={handleChange}
+          onFocus={() => handleFocus('message')}
+          onBlur={handleBlur}
         />
-        <button>Submit</button>
+        <button className='text-white'>Submit</button>
       </form>
+      <div className='flex flex-col items-center p-10 text-white'>
+        <h1>Results:</h1>
+        <h2>{formData.email}</h2>
+        <h2>{formData.message}</h2>
+      </div>
       </main>
     </div>
   );
