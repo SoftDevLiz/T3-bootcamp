@@ -1,5 +1,9 @@
- import { createRouter } from '../trpc'
+ import { createTRPCRouter } from '../trpc';
  import { contactFormRouter } from './contactForm'
 
- export const appRouter = createRouter()
+ export const appRouter = createTRPCRouter()
     .merge('contactForm', contactFormRouter);
+
+/* TODO: 
+    What's happening here and why??
+*/
