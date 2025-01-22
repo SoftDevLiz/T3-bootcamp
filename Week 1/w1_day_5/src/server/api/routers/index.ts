@@ -1,9 +1,8 @@
- import { createTRPCRouter } from '../trpc';
- import { contactFormRouter } from './contactForm'
+import { createTRPCRouter } from '../trpc';
+import { contactFormRouter } from './contactForm';
+import { mergeRouters } from '@trpc/server/unstable-core-do-not-import';
 
- export const appRouter = createTRPCRouter()
-    .merge('contactForm', contactFormRouter);
-
-/* TODO: 
-    What's happening here and why??
-*/
+export const appRouter = mergeRouters(
+  createTRPCRouter({}),
+  contactFormRouter
+);
