@@ -18,6 +18,11 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
         <TRPCReactProvider>{children}</TRPCReactProvider>
+        <footer className="flex flex-row justify-evenly border-2 p-5">
+          <a href="https://www.linkedin.com/in/liezlmouton/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+          <a href="https://github.com/SoftDevLiz" target="_blank" rel="noopener noreferrer">Github</a>
+          <a href="https://stackoverflow.com/users/22359117/thatliz" target="_blank" rel="noopener noreferrer">Stack Overflow</a>
+        </footer>
       </body>
     </html>
   );
