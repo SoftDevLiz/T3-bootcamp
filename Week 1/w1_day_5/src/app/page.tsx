@@ -10,7 +10,7 @@ export default function Home() {
   const [formData, setFormData] = useState<FormData>({ email: "", message: "" });
   const [focusedField, setFocusedField] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
-  const [fadeOut, setFadeOut] = useState(false); // New state for fade out
+  const [fadeOut, setFadeOut] = useState(false); 
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
