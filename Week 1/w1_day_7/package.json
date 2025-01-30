@@ -32,6 +32,7 @@
     "next": "^15.0.1",
     "next-auth": "5.0.0-beta.25",
     "react": "^18.3.1",
+    "react-canvas-confetti": "^2.0.7",
     "react-dom": "^18.3.1",
     "react-responsive-3d-carousel": "^2.1.4",
     "server-only": "^0.0.1",
