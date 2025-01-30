@@ -17,6 +17,11 @@ const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
   setFireworks(true);
 }
 
+if (fireworks) {
+  setTimeout(() => {
+    setFireworks(false)
+  }, 500)
+}
     return (
       <main className="min-h-screen">
         { fireworks && <Fireworks autorun={{ speed: 2 }} />}
