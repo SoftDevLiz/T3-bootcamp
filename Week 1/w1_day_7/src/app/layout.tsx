@@ -17,12 +17,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <TRPCReactProvider>{children}
         <footer className="flex flex-row justify-evenly border-2 p-5">
           <a href="https://www.linkedin.com/in/liezlmouton/" target="_blank" rel="noopener noreferrer"><img src="/linkedin.png" className="w-10"/></a>
           <a href="https://github.com/SoftDevLiz" target="_blank" rel="noopener noreferrer"><img src="/github.png" className="w-10"/></a>
           <a href="https://stackoverflow.com/users/22359117/thatliz" target="_blank" rel="noopener noreferrer"><img src="/stackoverflow.png" className="w-10"/></a>
         </footer>
+        </TRPCReactProvider>
       </body>
     </html>
   );

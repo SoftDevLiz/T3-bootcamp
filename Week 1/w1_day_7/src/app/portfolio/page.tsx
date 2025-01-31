@@ -3,6 +3,7 @@
 import { Carousel } from "react-responsive-3d-carousel";
 import "react-responsive-3d-carousel/dist/styles.css";
 import Link from "next/link";
+import DlCVButton from "../_components/DlCVButton";
 
 const items = [
   <img src="/Project 1.png" />,
@@ -20,6 +21,7 @@ const Portfolio: React.FC = () => {
           items={items}
           />
           <Link href="/contact" className="mt-5">Get in touch</Link>
+          <DlCVButton />
         </div>
       </main> 
     );
